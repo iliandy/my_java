@@ -22,6 +22,19 @@ public class Main {
 
         displayHighScorePosition(playerName, position);
         System.out.println(calculateHighScorePosition(playerScore));
+
+
+        int highScore = calculateHighScorePosition(1200);
+        displayHighScorePosition("Player1", highScore);
+
+        highScore = calculateHighScorePosition(800);
+        displayHighScorePosition("Player2", highScore);
+
+        highScore = calculateHighScorePosition(400);
+        displayHighScorePosition("Player3", highScore);
+
+        highScore = calculateHighScorePosition(80);
+        displayHighScorePosition("Player4", highScore);
     }
 
     public static int calcScore(boolean gameOver, int score, int levelCompleted, int bonus) {

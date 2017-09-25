@@ -1,22 +1,22 @@
 package com.iandyli;
 
 public class Main {
-    public static double calcFeetAndInchesToCentimeters(int feet, int inches) {
+    public static double calcFeetAndInchesToCentimeters(double feet, double inches) {
         if (feet < 0 || inches < 0 || inches > 12 ) {
             return -1;
         }
 
-        int totalIn = feet * 12 + inches;
+        double totalIn = feet * 12 + inches;
         return totalIn * 2.54;
     }
 
-    public static double calcFeetAndInchesToCentimeters(int inches) {
+    public static double calcFeetAndInchesToCentimeters(double inches) {
         if (inches < 0) {
             return -1;
         }
 
-        int totalFt = inches / 12;
-        int totalIn = inches % 12;
+        double totalFt = (int) inches / 12;
+        double totalIn = inches % 12;
         return calcFeetAndInchesToCentimeters(totalFt, totalIn);
     }
 

@@ -1,4 +1,5 @@
 package com.iandyli;
+
 // Create a new class for a bank account
 // Create fields for the account number, balance, customer name, email and phone number.
 //
@@ -10,7 +11,6 @@ package com.iandyli;
 // You will want to create various code in the Main class (the one created by IntelliJ) to
 // confirm your code is working.
 // Add some System.out.println's in the two methods above as well.
-
 public class BankAccount {
     private int acctNum;
     private double balance;
@@ -58,12 +58,12 @@ public class BankAccount {
         System.out.println("Balance after deposit is " + this.balance + ".");
     }
     public void withdraw(double amt) {
-        if (this.balance - amt > 0) {
+        if (this.balance - amt >= 0) {
             this.balance -= amt;
             System.out.println("Balance after withdraw is " + this.balance + ".");
         }
         else {
-            System.out.println("Insufficient funds to make withdrawal. Balance is currently " + this.balance + ".");
+            System.out.println("Insufficient funds to make withdrawal of " + amt + ". Balance is currently " + this.balance + ".");
         }
     }
 }

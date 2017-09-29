@@ -6,7 +6,7 @@ public class Tesla extends Car {
     private int motors;
     private int batteryCapacity;
 
-    public Tesla(int doors, int seats, int horsepower, String color, int year, String model, int motors, int batteryCapacity) {
+    public Tesla(int year, String model, int motors, int batteryCapacity) {
         super(4, 7, 600, "black");
         this.year = year;
         this.model = model;
@@ -28,5 +28,12 @@ public class Tesla extends Car {
 
     public int getBatteryCapacity() {
         return batteryCapacity;
+    }
+
+    public boolean toggleLudacrousMode() {
+        boolean state = true;
+
+        System.out.println(String.format("Ludicrous Mode: %b", state));
+        return !state;
     }
 }

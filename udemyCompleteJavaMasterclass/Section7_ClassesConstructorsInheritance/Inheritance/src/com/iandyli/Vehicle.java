@@ -47,11 +47,6 @@ public class Vehicle {
         return this;
     }
 
-    public Vehicle changeGears(int gearNum) {
-        System.out.printf(String.format("Changing gear to %d.", gearNum));
-        return this;
-    }
-
     public Vehicle move(double speed) {
         System.out.println(String.format("Moved at %f mph.", speed));
         return this;

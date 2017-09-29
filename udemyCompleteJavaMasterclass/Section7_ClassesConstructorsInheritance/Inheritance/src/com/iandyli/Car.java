@@ -29,4 +29,9 @@ public class Car extends Vehicle {
     public String getColor() {
         return color;
     }
+
+    public Car changeGears(int gearNum) {
+        System.out.printf(String.format("Changing gear to %d.", gearNum));
+        return this;
+    }
 }

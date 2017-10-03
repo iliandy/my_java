@@ -11,6 +11,14 @@ package com.iandyli;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Printer myPrinter = new Printer();
+
+        myPrinter.getTonerLevel();
+        myPrinter.getPagesPrinted();
+
+        myPrinter.printPage(100).getPagesPrinted();
+        myPrinter.getTonerLevel();
+        myPrinter.refillToner().getTonerLevel();
+
     }
 }

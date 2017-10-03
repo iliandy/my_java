@@ -1,23 +1,45 @@
 package com.iandyli;
 
-// Create a class and demonstrate proper encapsulation techniques
-// the class will be called Printer
-// It will simulate a real Computer Printer
-// It should have fields for the toner Level, number of pages printed, and
-// also whether its a duplex printer (capable of printing on both sides of the paper).
-// Add methods to fill up the toner (up to a maximum of 100%), another method to
-// simulate printing a page (which should increase the number of pages printed).
-// Decide on the scope, whether to use constructors, and anything else you think is needed.
 public class Printer {
-    private double tonerLevel;
-    private int pagesPrinted;
-    private boolean duplexPrinting;
+    private double tonerLevel = 100;
+    private int pagesPrinted = 0;
+    private boolean duplexPrinting = true;
 
+    // constructor with default parameters
+    public Printer() {}
+
+    // constructor with entered parameters
     public Printer(double tonerLevel, int pagesPrinted, boolean duplexPrinting) {
-        this.tonerLevel = tonerLevel;
+        if (0 <= tonerLevel && tonerLevel <= 100) {
+            this.tonerLevel = tonerLevel;
+        }
+
         this.pagesPrinted = pagesPrinted;
         this.duplexPrinting = duplexPrinting;
     }
 
-    
+    public Printer refillToner() {
+        this.tonerLevel = 100;
+        return this;
+    }
+
+    public Printer printPage(int numPages) {
+        this.tonerLevel -= 0.01;
+        this.pagesPrinted += numPages;
+        return this;
+    }
+
+    public double getTonerLevel() {
+        System.out.println(String.format("Toner level: %.2f.", tonerLevel));
+        return tonerLevel;
+    }
+
+    public int getPagesPrinted() {
+        System.out.println(String.format("Pages printed: %d.", pagesPrinted));
+        return pagesPrinted;
+    }
+
+    public boolean isDuplexPrinting() {
+        return duplexPrinting;
+    }
 }

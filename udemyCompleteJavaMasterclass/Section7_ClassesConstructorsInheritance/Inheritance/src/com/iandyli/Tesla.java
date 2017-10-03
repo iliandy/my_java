@@ -5,7 +5,7 @@ public class Tesla extends Car {
     private String model;
     private int motors;
     private int batteryCapacity;
-    private boolean ludaOn;
+    private boolean ludiOn;
 
     public Tesla(int year, String model, int motors, int batteryCapacity) {
         super(4, 7, 600, "black");
@@ -13,7 +13,7 @@ public class Tesla extends Car {
         this.model = model;
         this.motors = motors;
         this.batteryCapacity = batteryCapacity;
-        this.ludaOn = false;
+        this.ludiOn = false;
     }
 
     public int getYear() {
@@ -32,19 +32,19 @@ public class Tesla extends Car {
         return batteryCapacity;
     }
 
-    public boolean getLudaOn() { return ludaOn; }
+    public boolean getLudaOn() { return ludiOn; }
 
-    public boolean toggleLudacrousMode() {
+    public boolean toggleLudicrousMode() {
         String mode;
 
-        if (ludaOn) {
+        if (ludiOn) {
             mode = "disabled";
         }
         else {
             mode = "enabled";
         }
-        ludaOn = !ludaOn;
+        ludiOn = !ludiOn;
         System.out.println(String.format("Ludicrous Mode: %s", mode));
-        return ludaOn;
+        return ludiOn;
     }
 }

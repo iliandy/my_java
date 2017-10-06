@@ -37,6 +37,10 @@ public class Main {
 
         HealthyBurger myHealthyBurger = new HealthyBurger("Salmon", 9.00);
         myHealthyBurger.addHealthyTopping1("Sprouts", 0.80).addHealthyTopping2("Avocado", 1.00);
-        System.out.println(String.format("Total price of healthy burger: $%.2f", myHealthyBurger.itemizeHamburger()));
+        System.out.println(String.format("Total price of healthy burger: $%.2f \n", myHealthyBurger.itemizeHamburger()));
+
+        DeluxeBurger myDeluxeBurger = new DeluxeBurger();
+        myDeluxeBurger.addHamburgerTopping1("Bacon", 1.50);
+        System.out.println(String.format("Total price of deluxe burger: $%.2f", myDeluxeBurger.itemizeHamburger()));
     }
 }
